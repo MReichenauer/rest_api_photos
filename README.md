@@ -7,55 +7,55 @@ All the routes are listed below. For example, you can use Postman to try them ou
 /**
  * Register a user /register
  */
-router.post("/register", createUserRules, registerUser);
+router.post("/register")
 
 /**
  * Get a users profile /profile
  */
-router.get("/profile", basicAuthMiddleware, getProfile);
+router.get("/profile")
 
 /**
  * Create a photo /photos
  */
-router.post("/photos", basicAuthMiddleware, createPhotoRules, createPhotoHandler);
+router.post("/photos")
 
 /**
  * Get all of a users photos /photos
  */
-router.get("/photos", basicAuthMiddleware, getUserPhotosHandler);
+router.get("/photos")
 
 /**
  * Get a single photo of a user /photos/:photoId
  */
-router.get("/photos/:photoId", basicAuthMiddleware, getOnePhotoHandler);
+router.get("/photos/:photoId")
 
 /**
  * Update a single photo of a user /photos/:photoId
  */
-router.patch("/photos/:photoId", basicAuthMiddleware, updatePhotoRules, updatePhotoHandler);
+router.patch("/photos/:photoId")
 
 /**
  * Create a album /albums
  */
-router.post("/albums", basicAuthMiddleware, createAlbumRules, createAlbumHandler);
+router.post("/albums")
 
 /**
  * Get all of a users albums /albums
  */
-router.get("/albums", basicAuthMiddleware, getUserAlbumsHandler);
+router.get("/albums")
 
 /**
  * Get a single album of a user /albums/:albumId
  */
-router.get("/albums/:albumId", basicAuthMiddleware, getOneAlbumHandler);
+router.get("/albums/:albumId")
 
 /**
  * Update a single album of a user /albums/:albumId
  */
-router.patch("/albums/:albumId", basicAuthMiddleware, updateAlbumRules, updateAlbumHandler);
+router.patch("/albums/:albumId")
 
 /**
  * Add a single photo to an album of a user /albums/:albumId/photos
  */
-router.post("/albums/:albumId/photos", basicAuthMiddleware, addPhotoToAlbumHandler);
+router.post("/albums/:albumId/photos")
 
